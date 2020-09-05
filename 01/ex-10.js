@@ -15,3 +15,24 @@ cityFacts = {
 } ➞ "Paris has a population of 2,140,526 and is situated in Europe"
 
 */
+
+// Solution 1
+const cityFacts = {
+  name: 'Paris',
+  population: '2,140,526',
+  continent: 'Europe',
+};
+
+function getCityFacts(city) {
+  return `${city.name} has a population of ${city.population} and is situated in ${city.continent}.`;
+}
+
+console.log(getCityFacts(cityFacts));
+
+// Solution 2: Using object desctructuring
+function getCityFactsV2(city) {
+  const { name, population, continent } = city;
+  console.log(name, population, continent);
+}
+
+getCityFactsV2(cityFacts);
