@@ -16,3 +16,12 @@ getFillings(["bread", "lettuce", "bacon", "tomato", "bread"]) ➞ ["lettuce", "b
 
 The first and last elements will always be "bread".
 */
+const hamburger = ['bread', 'ham', 'cheese', 'ham', 'bread'];
+const hamburger2 = ['bread', 'lettuce', 'bacon', 'tomato', 'cheese', 'bread'];
+
+function getFillings(arr) {
+  return arr.slice(1, -1);
+}
+
+console.log(getFillings(hamburger));
+console.log(getFillings(hamburger2));

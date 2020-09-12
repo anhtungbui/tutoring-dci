@@ -12,3 +12,29 @@ noOdds([43, 65, 23, 89, 53, 9, 6]) ➞ [6]
 
 noOdds([718, 991, 449, 644, 380, 440]) ➞ [718, 644, 380, 440]
 */
+const arr1 = [1, 2, 3, 4, 5, 6, 7, 8];
+const arr2 = [718, 991, 449, 644, 380, 440];
+
+// Solution 1
+function noOdds(arr) {
+  return arr.filter((num) => {
+    return num % 2 === 0;
+  });
+}
+
+console.log(noOdds(arr1));
+console.log(noOdds(arr2));
+
+// Solution 2
+function noOddsV2(arr) {
+  let result = [];
+
+  arr.forEach((num) => {
+    if (num % 2 === 0) result.push(num);
+  });
+
+  return result;
+}
+
+console.log(noOddsV2(arr1));
+console.log(noOddsV2(arr2));

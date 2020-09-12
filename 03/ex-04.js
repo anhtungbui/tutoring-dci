@@ -16,3 +16,10 @@ The output of the sorted drinks object will be:
 
 sortDrinkByPrice(drinks) ➞ [{name: "lime", price: 10}, {name: "lemonade", price: 50}]
 */
+
+function sortDrinkByPrice(drinks) {
+  return drinks.sort((a, b) => a.price - b.price);
+}
+
+// Test cases
+console.log(sortDrinkByPrice(drinks));

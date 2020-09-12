@@ -21,3 +21,22 @@ emp3 = Employee("Antony", "Walker")
 emp3.firstname ➞ "Antony"
 
 */
+
+class Employee {
+  constructor(firstname, lastname) {
+    this.firstname = firstname;
+    this.lastname = lastname;
+  }
+
+  get fullname() {
+    return this.firstname + ' ' + this.lastname;
+  }
+
+  get email() {
+    return `${this.firstname}.${this.lastname}@company.com`.toLowerCase();
+  }
+}
+
+let emp1 = new Employee('John', 'Smith');
+console.log(emp1.email);
+console.log(emp1.fullname);
