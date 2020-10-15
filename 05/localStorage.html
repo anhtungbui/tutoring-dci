@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LocalStorage 101</title>
+  </head>
+  <body>
+    <script>
+      const obj = {
+        name: 'Nisha',
+        age: 36,
+      };
+
+      localStorage.setItem('demo', JSON.stringify(obj));
+
+      const x = JSON.parse(localStorage.getItem('demo'));
+
+      x.hobbies = 'cooking';
+      localStorage.setItem('demo', JSON.stringify(x));
+
+      const y = JSON.parse(localStorage.getItem('demo'));
+      delete y.age;
+      localStorage.setItem('demo', JSON.stringify(y));
+
+      function setToLS(key, value) {
+        localStorage.setItem(key, JSON.stringify(value));
+      }
+
+      function getFromLS(key) {
+        return JSON.parse(localStorage.getItem(key));
+      }
+
+      setToLS('demo2', 818328);
+      const z = getFromLS('demo2');
+      console.log(z);
+
+      // To clear all LS items
+      // localStorage.clear();
+
+      // To read items in the LS
+      // const x = localStorage.getItem('demo');
+      // if (x !== null) {
+      //   console.log('There is an item called demo with the value ' + x);
+      // } else {
+      //   console.log('There is nothing in the LS');
+      //   localStorage.setItem('demo', '');
+      // }
+    </script>
+  </body>
+</html>
