@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Crash Course</title>
+</head>
+<body>
+    <div id="app">
+        <h2>{{ name }}</h2>
+        <h2>{{ age + 10 }}</h2>
+        <h2>{{ status ? "Yes" : "No" }}</h2>
+        <h2>{{ today }}</h2>
+    </div>
+    <div id="app-2">
+        <h2 v-if="status">Hello world</h2>
+        <h2 v-else>Good bye</h2>
+        
+        <h2 v-if="weight > 100">Overweight</h2>
+        <h2 v-else>Still OK</h2>
+
+        <h2 v-if="name === 'A'">Mr. A</h2>
+        <h2 v-else-if="name === 'B'">Mr. B</h2>
+        <h2 v-else>Mr. C</h2>
+    </div>
+
+    <div id="app-3">
+        <h2 v-for="animal in animals">
+            {{ animal }}
+        </h2>
+        <h2 v-for="todo in todos">
+            {{ todo.body }}
+        </h2>
+    </div>
+
+    <div id="app-4">
+        <h2>{{ name }}</h2>
+        <button v-on:click="changeName">Change name</button>
+    </div>
+
+    <div id="app-5">
+       <todo-item
+       v-for="todo in todos"
+       v-bind:key="todo.id"
+       v-bind:item="todo"
+       ></todo-item>
+    </div>
+
+    <div id="app-6">
+        <h2>{{ message }}</h2>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
