@@ -1,0 +1,8 @@
+<button class="btn btn-success" (click)="fetchData()">Fetch Data</button>
+
+<ng-container *ngIf="positions">
+  <h3>Showing {{ positions.length }} jobs</h3>
+  <pre>{{ positions | json }}</pre>
+</ng-container>
+
+
