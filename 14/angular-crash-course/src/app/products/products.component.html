@@ -40,7 +40,7 @@
             />
           </td>
           <td>{{ product.productName }}</td>
-          <td>{{ product.code }}</td>
+          <td>{{ product.code | uppercase | seperator }}</td>
           <td>{{ product.available }}</td>
           <td>{{ product.price | currency:'EUR':'symbol':'1.2-3' }}</td>
           <td>{{ product.rating }}</td>
